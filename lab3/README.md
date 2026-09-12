@@ -1,3 +1,3 @@
-[Report](lab3/report.pdf)
+[Report](report.pdf)
 
-![Component diagram](lab3/component_diagram.png?raw=true)
+![Component diagram](component_diagram.png?raw=true)
