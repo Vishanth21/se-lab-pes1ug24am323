@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Component Diagram" id="lab3-courier">
+    <mxGraphModel dx="1621" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;fontSize=14;fontStyle=1;fontColor=#000000;" value="Hyperlocal Courier Dispatch &amp; Tracking Engine - Component Diagram (Microservices)" vertex="1">
+          <mxGeometry height="30" width="900" x="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_sender" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;Sender Client App&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="40" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="g_sender" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="192" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="c_rider" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;Rider Client App&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="40" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="g_rider" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="192" y="301" as="geometry" />
+        </mxCell>
+        <mxCell id="c_gw" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;API Gateway&lt;/b&gt;" vertex="1">
+          <mxGeometry height="200" width="180" x="360" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="g_gw" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="512" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="c_disp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;Dispatch Service&lt;/b&gt;" vertex="1">
+          <mxGeometry height="340" width="180" x="700" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="g_disp" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="852" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="c_route" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;Routing Service&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="1080" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="g_route" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="1232" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="c_track" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;Tracking Service&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="1080" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="g_track" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="1232" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="c_otp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;OTP Verification Service&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="1080" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="g_otp" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="1232" y="441" as="geometry" />
+        </mxCell>
+        <mxCell id="c_db" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;spacingTop=8;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" value="«component»&lt;br&gt;&lt;b&gt;Database&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="700" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="g_db" parent="1" style="shape=module;html=1;strokeColor=#000000;fillColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="16" width="22" x="852" y="606" as="geometry" />
+        </mxCell>
+        <mxCell id="b_senderapi" parent="1" style="shape=lollipop;direction=west;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;verticalLabelPosition=top;verticalAlign=bottom;rotation=90;" value="ISenderAPI" vertex="1">
+          <mxGeometry height="80" width="40" x="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="s_sender" parent="1" style="shape=requires;direction=east;html=1;strokeColor=#000000;fontColor=#000000;rotation=90;" value="" vertex="1">
+          <mxGeometry height="70" width="40" x="235" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="b_riderapi" parent="1" style="shape=lollipop;direction=west;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;verticalLabelPosition=top;verticalAlign=bottom;rotation=90;" value="IRiderAPI" vertex="1">
+          <mxGeometry height="70" width="40" x="305" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="s_rider" parent="1" style="shape=requires;direction=east;html=1;strokeColor=#000000;fontColor=#000000;rotation=90;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="240" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="b_dispatch" parent="1" style="shape=lollipop;direction=north;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;verticalLabelPosition=top;verticalAlign=bottom;" value="IDispatch" vertex="1">
+          <mxGeometry height="40" width="90" x="610" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="s_gw" parent="1" style="shape=requires;direction=east;html=1;strokeColor=#000000;fontColor=#000000;rotation=90;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="560" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="b_route" parent="1" style="shape=lollipop;direction=north;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;verticalLabelPosition=top;verticalAlign=bottom;" value="IRouteOptimization" vertex="1">
+          <mxGeometry height="40" width="90" x="990" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="s_disp_route" parent="1" style="shape=requires;direction=south;html=1;strokeColor=#000000;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="40" width="120" x="880" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="b_track" parent="1" style="shape=lollipop;direction=north;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;verticalLabelPosition=top;verticalAlign=bottom;" value="ITracking" vertex="1">
+          <mxGeometry height="40" width="90" x="990" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="s_disp_track" parent="1" style="shape=requires;direction=south;html=1;strokeColor=#000000;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="40" width="120" x="880" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="b_otp" parent="1" style="shape=lollipop;direction=north;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;verticalLabelPosition=top;verticalAlign=bottom;" value="IOTPVerification" vertex="1">
+          <mxGeometry height="40" width="90" x="990" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="s_disp_otp" parent="1" style="shape=requires;direction=south;html=1;strokeColor=#000000;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="40" width="120" x="879" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="b_data" parent="1" style="shape=lollipop;direction=east;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;fontSize=10;labelPosition=left;align=right;verticalLabelPosition=middle;verticalAlign=middle;spacingRight=6;" value="IDataAccess" vertex="1">
+          <mxGeometry height="40" width="35" x="772.5" y="562.5" as="geometry" />
+        </mxCell>
+        <mxCell id="s_disp_db" parent="1" style="shape=requires;direction=west;html=1;strokeColor=#000000;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="52.5" width="35" x="772.5" y="517.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
