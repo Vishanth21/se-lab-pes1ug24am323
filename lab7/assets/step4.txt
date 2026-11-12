@@ -1,0 +1,194 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.13, pytest-9.2.0, pluggy-1.7.0
+rootdir: /mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7
+plugins: hypothesis-6.170.15
+collected 3 items
+
+test_food_delivery.py FFF                                                [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_parse_order_no_crash ___________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 8, in test_parse_order_no_crash
+  |     def test_parse_order_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 10, in test_parse_order_no_crash
+    |     parse_order(s)
+    |     ~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 5, in parse_order
+    |     order[name.strip()] = int(qty)
+    |                           ~~~^^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 12, in test_parse_order_no_crash
+    |     assert False, f"parse_order crashed with: {e}"
+    | AssertionError: parse_order crashed with: invalid literal for int() with base 10: ''
+    | assert False
+    | Failing test case: test_parse_order_no_crash(
+    |     s=':',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 10, in test_parse_order_no_crash
+    |     parse_order(s)
+    |     ~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 4, in parse_order
+    |     name, qty = item.split(":")
+    |     ^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 12, in test_parse_order_no_crash
+    |     assert False, f"parse_order crashed with: {e}"
+    | AssertionError: parse_order crashed with: not enough values to unpack (expected 2, got 1)
+    | assert False
+    | Failing test case: test_parse_order_no_crash(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 10, in test_parse_order_no_crash
+    |     parse_order(s)
+    |     ~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 3, in parse_order
+    |     for item in items_csv.split(","):
+    |                 ^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 12, in test_parse_order_no_crash
+    |     assert False, f"parse_order crashed with: {e}"
+    | AssertionError: parse_order crashed with: 'NoneType' object has no attribute 'split'
+    | assert False
+    | Failing test case: test_parse_order_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+__________________________ test_delivery_eta_no_crash __________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 16, in test_delivery_eta_no_crash
+  |     def test_delivery_eta_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 18, in test_delivery_eta_no_crash
+    |     delivery_eta(s)
+    |     ~~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 10, in delivery_eta
+    |     return int(15 + float(distance_km) * 4)
+    | OverflowError: cannot convert float infinity to integer
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 20, in test_delivery_eta_no_crash
+    |     assert False, f"delivery_eta crashed with: {e}"
+    | AssertionError: delivery_eta crashed with: cannot convert float infinity to integer
+    | assert False
+    | Failing test case: test_delivery_eta_no_crash(
+    |     s='INFINITY',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 18, in test_delivery_eta_no_crash
+    |     delivery_eta(s)
+    |     ~~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 10, in delivery_eta
+    |     return int(15 + float(distance_km) * 4)
+    |                     ~~~~~^^^^^^^^^^^^^
+    | ValueError: could not convert string to float: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 20, in test_delivery_eta_no_crash
+    |     assert False, f"delivery_eta crashed with: {e}"
+    | AssertionError: delivery_eta crashed with: could not convert string to float: ''
+    | assert False
+    | Failing test case: test_delivery_eta_no_crash(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 18, in test_delivery_eta_no_crash
+    |     delivery_eta(s)
+    |     ~~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 10, in delivery_eta
+    |     return int(15 + float(distance_km) * 4)
+    |                     ~~~~~^^^^^^^^^^^^^
+    | TypeError: float() argument must be a string or a real number, not 'NoneType'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 20, in test_delivery_eta_no_crash
+    |     assert False, f"delivery_eta crashed with: {e}"
+    | AssertionError: delivery_eta crashed with: float() argument must be a string or a real number, not 'NoneType'
+    | assert False
+    | Failing test case: test_delivery_eta_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+________________________ test_coupon_discount_no_crash _________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 24, in test_coupon_discount_no_crash
+  |     def test_coupon_discount_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 26, in test_coupon_discount_no_crash
+    |     coupon_discount(s)
+    |     ~~~~~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 14, in coupon_discount
+    |     return int(code.upper().split("SAVE")[1])
+    |                ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+    | IndexError: list index out of range
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 28, in test_coupon_discount_no_crash
+    |     assert False, f"coupon_discount crashed with: {e}"
+    | AssertionError: coupon_discount crashed with: list index out of range
+    | assert False
+    | Failing test case: test_coupon_discount_no_crash(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 26, in test_coupon_discount_no_crash
+    |     coupon_discount(s)
+    |     ~~~~~~~~~~~~~~~^^^
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/food_delivery.py", line 14, in coupon_discount
+    |     return int(code.upper().split("SAVE")[1])
+    |                ^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'upper'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/mnt/data/programming/pesu/se/se-lab-pes1ug24am323/lab7/test_food_delivery.py", line 28, in test_coupon_discount_no_crash
+    |     assert False, f"coupon_discount crashed with: {e}"
+    | AssertionError: coupon_discount crashed with: 'NoneType' object has no attribute 'upper'
+    | assert False
+    | Failing test case: test_coupon_discount_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+=========================== short test summary info ============================
+FAILED test_food_delivery.py::test_parse_order_no_crash - ExceptionGroup: Hyp...
+FAILED test_food_delivery.py::test_delivery_eta_no_crash - ExceptionGroup: Hy...
+FAILED test_food_delivery.py::test_coupon_discount_no_crash - ExceptionGroup:...
+============================== 3 failed in 0.66s ===============================
